@@ -7,8 +7,11 @@ angular.module('video-player')
   })
   .controller('videoCtrl', function($scope) {
     this.videos = window.exampleVideoData;
-    this.video = window.exampleVideoData[0];
-    this.setVideo = (video) => {
-      this.video = video;
+    this.currentVideo = window.exampleVideoData[0];
+    this.selectVideo = (video) => {
+      this.currentVideo = video;
+    };
+    this.searchResults = () => {
+      console.log('search button clicked at', new Date().getTime());
     };
   });
